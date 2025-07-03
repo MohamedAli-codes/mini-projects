@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    background-color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: white;
+    transform-origin: top left;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+    transition: 0.5s linear;
+}
+
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+.container.show-nav +.nav-bar li{
+    transform: translateX(0);
+    transition-delay: 0.2s;
+}
+
+.circle-btns.active {
+    transform: rotate(-90deg);
+    transition:  0.5s linear;
+}
+
+.circle {
+    position: fixed;
+    left: -100px;
+    top: -100px;
+    z-index: 100;
+}
+
+.circle-btns {
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition:  0.5s linear;
+}
+
+.circle-btns button {
+    position: absolute;
+    top: 56%;
+    left: 44%;
+    height: 70px;
+    width: 70px;
+    border-bottom-right-radius: 100%;
+    font-size: 27px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0px rgb(187 45 45 / 49%);
+    padding-right: 10px;
+} 
+
+.circle-btns button#open-nav {
+    left: 56%;
+}
+.circle-btns button#close-nav {
+    top: 55%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+} 
+
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.content h1 {
+    margin-bottom: 0;
+}
+
+.content .author {
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #333;
+}
+
+.content p {
+    color: #333;
+    line-height: 1.5;
+}
+
+.content img {
+    min-width: 100%;
+}
+
+
+.nav-bar {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+
+.nav-bar ul {
+    list-style: none;
+}
+
+.nav-bar li {
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 40px;
+    transform: translateX(-100%);
+    transition:  0.4s ease-in;
+
+}
+
+.nav-bar ul li +li {
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+
+.nav-bar ul li + li + li {
+    margin-left: 30px;
+    transform: translateX(-200%);
+}
+
+
+
+.nav-bar li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
