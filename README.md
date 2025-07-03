@@ -7,7 +7,7 @@ All the projects are viewable online through GitHub Pages.
 
 ## 🌐 Live Demo
 
-👉 **[View Live Projects Homepage](https://mohamedali-codes.github.io/mini-projects/)**
+👉 **[View Live Projects Homepage](https://mohamedali-codes.github.io/mini-projects)**
 
 This page includes links to each individual project, so you can explore them all in one place.
 
